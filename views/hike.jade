@@ -3,3 +3,20 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  div
+    h3 Hikes
+    table(border="1")
+      tr
+        td Date
+        td Name
+        td Location
+        td Distance
+        td Weather
+      each hike in hikes
+        tr
+          td #{hike.HIKE_DATE.toDateString()}
+          td #{hike.NAME}
+          td #{hike.LOCATION}
+          td #{hike.DISTANCE}
+          td #{hike.WEATHER}
