@@ -27,11 +27,11 @@ app.configure(function(){
 
 app.configure('development', function() {
   console.log('Using development settings.');
+  // Make sure to add DB password below
   app.set('connection', mysql.createConnection({
     host: '',
     user: '',
-    port: '',
-    password: ''}));
+    port: ''}));
   app.use(express.errorHandler());
 });
 
